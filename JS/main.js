@@ -140,7 +140,7 @@ window.onload=function(){
   	inser="";
     //获取ajax返回的总页码为全局变量中的pageNow赋值
   	for (var i = 0; i < response.length; i++) {
-  	inser+="<div class='clbox'>"+"<div class='smallbox'>"+
+  	inser="<div class='clbox'>"+"<div class='smallbox'>"+
  			"<a href="+response[i].providerLink+">"+
  			"<img src="+response[i].middlePhotoUrl+">"+"</a>"+
 			"<h2>"+response[i].name+"</h2>"+
@@ -149,8 +149,9 @@ window.onload=function(){
 			"<span>"+response[i].learnerCount+"</span>"+"</div>"+
 			"<P>￥"+response[i].price+"</P>"+"</div>"+
 		"</div>"
+		oDiv.appendChild(inser);
     }
-    oDiv.innerHTML=inser;
+    
      // 绑定课程表移入移除时间
     var box=cxdUtil.getElementsByClass("clbox", oDiv);
     for (var i = 0; i < box.length; i++) {
