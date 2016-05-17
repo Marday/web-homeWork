@@ -307,7 +307,7 @@ window.onload=function(){
   //执行内容区右侧最热排行榜的ajax函数以获得数据
   cxdUtil.ajax("GET", "http://study.163.com/webDev/hotcouresByCategory.htm", "",hotList);
   //导航条的关闭
-  var aSpan=cxdUtil.getElementsByClass('header-right', document)[0];
+  var aSpan=cxdUtil.getElementsByClass('header-right', document)[0],
   direct=cxdUtil.getElementsByClass('header-m', document)[0],
   close=aSpan.getElementsByTagName('img')[0];
   close.onclick=function(){   //绑定导航条的关闭按钮函数
