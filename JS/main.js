@@ -138,6 +138,7 @@ window.onload=function(){
     totalPage=JSON.parse(response).totalPage;
   	var response=JSON.parse(response).list,
   	inser="";
+  	oDiv.innerHTML="";
     //获取ajax返回的总页码为全局变量中的pageNow赋值
   	for (var i = 0; i < response.length; i++) {
   	inser="<div class='clbox'>"+"<div class='smallbox'>"+
