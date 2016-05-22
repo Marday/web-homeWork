@@ -437,6 +437,6 @@ window.onload=function(){
     clearInterval(imageT);
   });
   cxdUtil.addHandler(moveImageMask, "mouseout", function(){
-    imageT=setInterval(auto,5000);
+    imageT=setInterval(auto,3500);
   });
 }
