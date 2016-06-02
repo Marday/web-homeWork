@@ -1,4 +1,4 @@
-window.onload=function(){
+(function(){
 	var cxdUtil={
 		//ajax 函数
 		ajax: function(method,url,data,fnsucc){
@@ -441,4 +441,4 @@ window.onload=function(){
   cxdUtil.addHandler(moveImageMask, "mouseout", function(){
     imageT=setInterval(auto,3500);
   });
-}
+})()
