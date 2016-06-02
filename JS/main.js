@@ -141,7 +141,7 @@ window.onload=function(){
   	oDiv.innerHTML="";
     //获取ajax返回的总页码为全局变量中的pageNow赋值
   	for (var i = 0; i < response.length; i++) {
-  	var newBox=document.creatElement("div");
+  	var newBox=document.createElement("div");
   	newBox.className="clbox";
   	inser="<div class='smallbox'>"+
  		"<a href="+response[i].providerLink+">"+
