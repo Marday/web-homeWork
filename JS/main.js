@@ -141,16 +141,18 @@ window.onload=function(){
   	oDiv.innerHTML="";
     //获取ajax返回的总页码为全局变量中的pageNow赋值
   	for (var i = 0; i < response.length; i++) {
-  	inser="<div class='clbox'>"+"<div class='smallbox'>"+
+  	var newBox=document.createElement("div");
+  	newBox.className="clbox";
+  	inser="<div class='smallbox'>"+
  			"<a href="+response[i].providerLink+">"+
  			"<img src="+response[i].middlePhotoUrl+">"+"</a>"+
 			"<h2>"+response[i].name+"</h2>"+
 			"<span>"+response[i].provider+"</span>"+
 			"<div>"+"<img src=image/icon/peopleIcon.png>"+
 			"<span>"+response[i].learnerCount+"</span>"+"</div>"+
-			"<P>￥"+response[i].price+"</P>"+"</div>"+
-		"</div>"
-		oDiv.innerHTML+=inser;
+			"<P>￥"+response[i].price+"</P>"+"</div>"
+	newBox.innerHTML=inser;
+	oDiv.appendChild(newBox);
     }
      // 绑定课程表移入移除时间
     var box=cxdUtil.getElementsByClass("clbox", oDiv);
